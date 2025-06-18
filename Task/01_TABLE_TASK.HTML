@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nested Table Example</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<p style="text-align:center;"><b>Example : Nested</b></p>
+
+<table align="center">
+    <tr>
+        <th rowspan="2"><b>CI</b></th>
+        <th rowspan="2"><b>All<br>Genders</b></th>
+        <th colspan="2"><b>By Gender</b></th>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <th><b>Males</b></th>
+                    <th><b>Females</b></th>
+                </tr>
+                <tr>
+                    <td>9215604</td>
+                    <td>4512358</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <th><b>Rural</b></th>
+        <td>6521458</td>
+        <td>4215389</td>
+        <td>4152348</td>
+    </tr>
+</table>
+
+</body>
+</html>
