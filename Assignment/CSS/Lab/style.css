@@ -1,0 +1,62 @@
+body{
+    height: 10s00px;
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: rgb(209, 219, 216);
+    background-image: url("/images/univers.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: left;
+}
+header{
+    
+    background-color: cadetblue;
+    color: rgb(250, 249, 249);
+    padding: 40px 0;
+    text-align: center;
+    justify-content: center;
+}
+.navbar{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    background-color: rgb(68, 124, 180);
+    
+}
+.navbar a{
+    color: aqua;
+    text-decoration: none;
+    display: block;
+    padding: 14px 20px;
+    font-size:large;
+
+}
+.navbar a:hover{
+    background-color: lightcoral;
+}
+.paragraph{
+     display: block;
+    color: rgb(0, 94, 255);
+    background-color: azure;
+    border: 5px solid dodgerblue;
+    border-radius: 20px;
+    margin-top: 5;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 30px;
+    padding: 10px;
+    line-height: 50px;
+}
+
+.divtag{
+    background-color: lightseagreen;
+  color: darkslategrey;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 30px;
+    border: 5px;
+    border-radius: 15px;
+    border-style: dashed;
+}
