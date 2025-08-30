@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.img{
+    height: 200px;
+    width: 400px;
+    border: 2px solid;
+    margin: 200px auto;
+    background-image: url("/eliteshoppyimages/blazer.jpg");
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden; 
+    filter: brightness(110%);
+}
+.top{
+    height: 200px;
+    width: 400px;
+   background-color: rgba(0, 0, 0,0.1);
+   transform: translate(-100%,100%);
+    position: absolute;
+    transition: 1s;
+}
+.bottom{
+        height: 200px;
+    width: 400px;
+    background-color: rgba(0, 0, 0,0.1);
+    transform: translate(100%,-100%);
+    transition: 1s; */
+ }
+/* .top::after{
+    transform: translate(0);
+}
+.img:hover::after{
+    transform: translate(0) */
+/* } */
+/* .img:hover .top::before{
+    transform: translate(100%);
+} */
+.img:hover .top{
+transform: translate(0);
+}
+.img:hover .bottom{
+    transform: translate(0)
+}
+    </style>
+</head>
+<body>
+    <div class="img">
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+</body>
+</html>

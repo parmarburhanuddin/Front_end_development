@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="contact">CONTACT US</div>
+    <div class="hr"></div>
+    <div class="address">
+        <P><strong>ADDRESS :</strong></P>
+        <P>SAINT MARCO STREET 6TH</P>
+        FLOOR, TOKYO, JAPAN, 123456.
+        <div class="icons">
+            <p id="1"><i class="fa-solid fa-phone" style="color: #d91212;"></i></p>
+            <P id="2"><i class="fa-solid fa-envelope" style="color: #9AD6DD;"></i></P>
+            <div class="number">
+                <p style="color: #d91212;">+91 1234567890</p>
+            </div>
+            <div class="email">
+                <p style="color: #9AD6DD;">example@gmail.com</p>
+            </div>
+            <div class="location"><i class="fa-solid fa-location-dot" style="color: red; font-size: 50px;"></i></div>
+        </div>
+    </div>
+    <form class="form" method="get" target="_blank">
+        <input class="name" type="text" placeholder="Name :" required pattern="[A-Za-z]{3,6}"
+            title="Name must be 3 to 6 alphabets only (no numbers allowed)">
+        <input class="company" type="text" placeholder="Company :" required>
+        <input class="emailinput" type="text" placeholder="E-mail :" required
+            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Enter a valid email address (e.g. user@mail.com)"
+            maxlength="20">
+        <input class="mobile" type="tel" placeholder="Mobile :" required pattern="[6-9][0-9]{9}"
+            title="Mobile must be 10 digits and start with 6, 7, 8, or 9" maxlength="10">
+        <input type="text" class="message" placeholder="Message :" required>
+        <button class="button">Send</button>
+    </form>
+    <div class="map"><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3786.3527771922036!2d72.61286647544296!3d23.03791097916297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84242121e113%3A0x5bc68a099e1e1a88!2sNutan%20Mill%20Rd%2C%20Ahmedabad%2C%20Gujarat%20382345!5e1!3m2!1sen!2sin!4v1755850349594!5m2!1sen!2sin"
+            height="400px" width="500px" style="border:0;" allowfullscreen="yes"
+            referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    <div class="social">
+        <a href="https://www.facebook.com" target="_blank" style="color: blue;"><i
+                class="fa-brands fa-facebook"></i></a>
+        <a href="https://x.com" target="_blank" style="color: #39CBFA;"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://in.linkedin.com" target="_blank" style="color: #3D99C0;"><i
+                class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/parmarburhanuddin/Front_end_development" target="_blank" style="color: #000000;"><i
+                class="fa-brands fa-square-github"></i></a>
+    </div>
+</body>
+
+</html>

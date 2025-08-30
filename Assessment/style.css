@@ -1,0 +1,156 @@
+body {
+    background-color: #ADD8E6;
+}
+
+.contact {
+    margin: 20px;
+    margin-left: 100px;
+    margin-right: 80px;
+    font-size: xx-large;
+}
+
+.hr {
+    margin-top: -20px;
+    margin: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 0px;
+    border: 1px solid black;
+    background-color: black;
+}
+
+.address {
+    margin: 100px;
+    margin-top: 20PX;
+    height: 80px;
+    padding: 10px;
+    background-color: #F8F9FA;
+    line-height: 10px;
+    margin-bottom: 20px;
+}
+
+.icons i {
+    margin-right: 10px;
+    transform: translate(375px, -60px);
+    gap: 20px;
+}
+
+.number p {
+    transform: translate(400px, -122px);
+    font-size: ;
+}
+
+.email p {
+    transform: translate(400px, -115px);
+}
+
+.location i {
+    transform: translate(1040px, -190px);
+}
+
+.form {
+    margin: 100px;
+    margin-top: 10PX;
+    height: 500px;
+    background-color: #F8F9FA;
+}
+
+.name {
+    margin: 20px;
+    padding: 10px;
+    width: 250px;
+    height: 20px;
+    font-size: x-large;
+}
+
+.name:focus {
+    background-color: darkgrey;
+    color: black;
+    font-weight: bolder;
+}
+
+.company {
+    margin: 20px;
+    padding: 10px;
+    width: 250px;
+    height: 20px;
+    font-size: x-large;
+}
+
+.company:focus {
+    background-color: darkgrey;
+    color: black;
+    font-weight: bolder;
+}
+
+.emailinput {
+    transform: translate(-635px, 70px);
+    margin: 20px;
+    padding: 10px;
+    width: 250px;
+    height: 20px;
+    font-size: x-large;
+}
+
+.emailinput:focus {
+    background-color: darkgrey;
+    color: black;
+    font-weight: bolder;
+}
+
+.mobile {
+    transform: translate(317px, -53px);
+    margin: 20px;
+    padding: 10px;
+    width: 250px;
+    height: 20px;
+    font-size: x-large;
+}
+
+.mobile:focus {
+    background-color: darkgrey;
+    color: black;
+    font-weight: bolder;
+}
+
+.message {
+    transform: translate(-320px, 50px);
+    margin: 20px;
+    padding: 10px;
+    width: 575px;
+    height: 100px;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.message:focus {
+    background-color: darkgrey;
+    color: black;
+    font-weight: bolder;
+}
+
+.button {
+    transform: translate(-942px, 150px);
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: #DC3545;
+    color: white;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: red;
+}
+
+.map {
+    margin: 20px;
+    margin-top: 20px;
+    transform: translate(750px, -580px);
+}
+
+.social {
+    transform: translate(770px, -590px);
+    font-size: 50px;
+}

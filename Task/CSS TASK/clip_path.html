@@ -10,12 +10,22 @@
             width: 200px;
             background-color: aqua;
             clip-path: polygon(50% 0%,60% 35%,100% 35%,70% 55%,80% 90%,50% 70%,20% 90%,30% 55%,2% 35%,40% 35%);
+            transition: 1s;
+        }
+         .star:hover{
+            background-color: gold;
+             transform: scale(1.1);
         }
         .rightarrow{
             height: 200px;
             width: 200px;
             background-color: aqua;
             clip-path: polygon(0% 25%,50% 25%,50% 0%,100% 50%,50% 100%,50% 75%,0% 75%);
+            transition: 1s;
+        }
+        .rightarrow:hover{
+            background-color: greenyellow;
+            transform: scale(1.1);
         }
         body{
             display: flex;
@@ -26,20 +36,56 @@
             width: 200px;
             background-color: aqua;
             clip-path: polygon(50% 0%,100% 50%,75% 50%,75% 100%,25% 100%,25% 50%,0% 50%);
+            transition: 1s;
+        }
+        .uparrow:hover{
+            background-color: greenyellow;
+            transform: scale(1.05);
         }
         .star6{
             height: 200px;
             width: 200px;
             background-color: aqua;
-            clip-path: polygon(50% 0%,75% 30%,100% 30%,85% 50%,100% 75%,75% 75%,50% 100%,25% 75%,0% 75%,15% 50%,0% 30%,25% 30%);
+            border: 2px solid;
+            clip-path: polygon(50% 0%,75% 30%,100% 30%,85% 50%,100% 75%,75% 75%,50% 100%,25% 75%,0% 75%,15% 50%,0% 30%,25% 30%); 
+            transition: 1s;
+        }
+        .star6:hover{
+            background-color: greenyellow;
+            transform: scale(1.1);
+        }
+        .downarrow{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            clip-path: polygon(25% 0%,75% 0%,75% 50%,100% 50%,50% 100%,0% 50%,25% 50%,25% 0%);
+            transition: 1s;
+        }
+        .downarrow:hover{
+            background-color: greenyellow;
+            transform: scale(1.1);
+        }
+        .leftarrow{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            clip-path: polygon(0% 25%,50% 25%,50% 0%,100% 50%,50% 100%,50% 75%,0% 75%);
+            transition: 1s;
+                }
+        .leftarrow:hover{
+            background-color: greenyellow;
+            transform:scale(1.1)
         }
     </style>
 </head>
 <body>
     <div class="star"></div>
+    <div class="smallstar"></div>
     <div class="rightarrow"></div>
     <div class="uparrow"></div>
     <div class="star6"></div>
+    <div class="downarrow"></div>
+    <div class="leftarrow"></div>
 
     
 </body>

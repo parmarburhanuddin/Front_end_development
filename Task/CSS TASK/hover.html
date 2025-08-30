@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Truck Hover Animation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+
+
+    .box {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      background: #ffffff;
+      border: 2px solid #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      background: #4cafef;
+    }
+
+    .truck-icon {
+      font-size: 50px;
+      z-index: 2;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    .box:hover .truck-icon {
+      color: #fff;
+    }
+
+    /* Scaling inner box */
+    .scale-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #4cafef;
+      transform: scale(0);
+      transition: transform 0.5s ease;
+      z-index: 1;
+    }
+
+    .box:hover .scale-box {
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <div class="scale-box"></div>
+    <i class="fas fa-truck truck-icon"></i>
+  </div>
+
+</body>
+</html>
