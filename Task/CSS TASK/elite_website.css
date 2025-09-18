@@ -1,0 +1,39 @@
+.nav1{
+    display: flex;
+    border: 2px solid;
+    background-color: black;
+    color: white;
+}
+.box{
+    border: 2px solid;
+    width: 25%;
+    text-align: center;
+}
+header{
+    display: flex;
+    border: 2px solid;
+}
+.content{
+    height: 100px;
+    width: 33.33%;
+    border: 2px solid;
+    text-align: center;
+}
+.nav2{
+    background-color: rgb(0, 0, 0);
+    color:aquamarine;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-around; */
+}
+.options{
+    /* padding: 20px 80px; */
+    font-size: 20px;
+    width: 80%;
+    border: 2px solid white;
+}
+.button{
+    width: 20%;
+    border: 2px solid white;
+}

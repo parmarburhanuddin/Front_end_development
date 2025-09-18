@@ -1,0 +1,242 @@
+@media only screen and (max-width:1260px) {
+    .header-content .header-h1 {
+        width: 50%;
+    }
+
+    .header-content .header-p {
+        width: 60%;
+    }
+
+    #sec3 .card .card-btn {
+        width: 70%;
+    }
+
+    #sec4 .row .col {
+        width: 33.33%;
+        margin: 0 auto;
+    }
+
+    #sec4 .col .img-top {
+        position: absolute;
+        left: 25%;
+        top: 85%;
+        background-color: #eb7f4e;
+        border: 2px solid black;
+        font-size: 25px;
+        font-weight: 700;
+        padding: 10px 10px;
+    }
+
+    #sec4 .card-btn {
+        width: 50%;
+        margin: 10px 70px;
+    }
+
+}
+
+@media only screen and (max-width:992px) {
+    .header-content .header-h1 {
+        width: 50%;
+    }
+
+    .header-content .header-p {
+        width: 60%;
+    }
+#sec3 .row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #sec3 .row .col {
+        width: 70%;
+        margin: 30px auto;
+    }
+
+    #sec3 .card .card-btn {
+        width: 50%;
+    }
+    #sec4 .row .col {
+        width: 33.33%;
+        margin: 0 auto;
+    }
+
+    #sec4 .col .img-top {
+        transform: translate(50%,-60%);
+        left: 20%;
+        top: 85%;
+        background-color: #eb7f4e;
+        border: 2px solid black;
+        font-size: 25px;
+        font-weight: 700;
+        padding: 10px 10px;
+    }
+
+    #sec4 .card-btn {
+        width: 50%;
+        margin: 10px 70px;
+    }
+
+    #sec5 .container .row .col-4 {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .nav .nav-ul {
+        display: none;
+    }
+
+    .nav .icon .search {
+        display: none;
+    }
+
+    .nav .icon .bar {
+        display: block;
+    }
+
+    .header-content .header-h1 {
+        width: 50%;
+    }
+
+    .header-content .header-p {
+        width: 60%;
+    }
+
+    #sec1 .row .col {
+        width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    #sec2 .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sec2 .row .col-4 {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #sec2 .row .col-6 {
+        width: 100%;
+    }
+
+    .sec2-content .sec2-h1 {
+        width: 70%;
+    }
+
+    .sec2-content .sec2-p {
+        width: 70%;
+    }
+
+    #sec3 .menu {
+        margin-bottom: 30px;
+    }
+
+    .menu-p {
+        width: 100%;
+    }
+
+    #sec3 .row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #sec3 .row .col {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #sec3 .card .card-btn {
+        width: 50%;
+    }
+
+    #sec4 .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sec4 .row .col {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    #sec4 .col .img-top {
+        position: absolute;
+        left: 25%;
+        top: 85%;
+        background-color: #eb7f4e;
+        border: 2px solid black;
+        font-size: 25px;
+        font-weight: 700;
+        padding: 15px 30px;
+    }
+
+    #sec4 .card-btn {
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    #sec5 .container .row .col-6 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #sec5 .container .row .col-4 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+}
+
+@media only screen and (max-width:576px) {
+    #sec3 .row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #sec3 .row .col {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #sec3 .card .card-btn {
+        width: 70%;
+    }
+
+    #sec3 .card-p {
+        width: 70%;
+    }
+
+    #sec4 .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sec4 .row .col {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #sec4 .col .img-top {
+        position: absolute;
+        left: 20%;
+        top: 85%;
+        background-color: #eb7f4e;
+        border: 2px solid black;
+        font-size: 25px;
+        font-weight: 700;
+        padding: 10px 20px;
+    }
+
+    #sec4 .col .card-btn {
+        width: 50%;
+        margin-left: 25%;
+    }
+}

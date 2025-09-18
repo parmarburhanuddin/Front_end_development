@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* utility */
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* nav start */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-ul .nav-li {
+    display: inline-block;
+    margin: 0 50px;
+}
+
+.icon .search {
+    font-size: 25px;
+}
+
+.icon .bar {
+    display: none;
+    font-size: 25px;
+}
+
+.nav-a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+
+.search-a {
+    text-decoration: none;
+    color: black;
+}
+
+.bar-a {
+    text-decoration: none;
+    color: black;
+}
+
+/* nav end */
+
+/* header start */
+#header {
+    background-image: url("/IMAGES/HEADER.png");
+    background-size: 100% 100%;
+}
+
+.header-content {
+    padding: 70px 0px;
+    color: #000000;
+    font-family: "Open Sans";
+}
+
+.header-content .header-h1 {
+    width: 40%;
+    font-size: clamp(20px, 7.8vw, 92px);
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 30px 0px;
+}
+
+.header-p {
+    width: 40%;
+    font-size: clamp(16px, 2.3vw, 21px);
+    font-weight: 400;
+    margin: 30px 0px;
+}
+
+.header-btn {
+    padding: 10px 20px;
+    background-color: #f2cd5d;
+    font-size: 21px;
+    font-weight: 700;
+    font-family: "Open Sans";
+    margin: 30px 0px;
+    cursor: pointer;
+}
+
+/* header end */
+
+/* section 1 start*/
+.row {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    font-family: "Open Sans";
+    color: #000000;
+    justify-content: space-around;
+}
+
+#sec1 .row .col {
+    width: 33.33%;
+}
+
+.col {
+    margin: 70px 0px;
+}
+
+.col .card-img {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.card-content .card-h4 {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.card-content .card-p {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: "Open Sans";
+    text-align: center;
+    color: #585858;
+}
+
+/* section 1 end */
+
+/* section 2 start */
+#sec2 {
+    padding: 30px 0;
+}
+
+#sec2 .row {
+    display: flex;
+}
+
+#sec2 .row .col-4 {
+    width: 40%;
+}
+
+#sec2 .row .col-6 {
+    width: 60%;
+    background-image: url("/IMAGES/section-2\ design.png");
+    background-size: 100% 100%;
+}
+
+.sec2-content {
+    color: #000000;
+    font-family: "Open Sans";
+    margin-left: 13%;
+    margin-top: 10%;
+}
+
+.sec2-content .sec2-h1 {
+    width: 80%;
+    font-size: clamp(20px, 7.8vw, 75px);
+    font-weight: 700;
+}
+
+.sec2-content .sec2-p {
+    width: 80%;
+    font-size: clamp(16px, 2.3vw, 21px);
+    font-weight: 400;
+    margin: 70px 0px;
+}
+
+.sec2-content .sec2-a {
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* section 2 end */
+
+/* section 3 start */
+#sec3 .menu {
+    font-family: "Open Sans";
+    color: #000000;
+}
+
+.menu .menu-h1 {
+    font-size: 58px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.menu .menu-p {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 21px;
+    font-weight: 400;
+    text-align: center;
+}
+
+#sec3 .row .col {
+    width: 40%;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
+    font-family: "Open Sans";
+}
+
+.card .card-img {
+    width: 100%;
+}
+
+.card .content {
+    width: 50%;
+}
+
+.card .card-h1 {
+    font-size: clamp(20px, 2.8vw, 33px);
+    color: #010101;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.card .card-p {
+    width: 80%;
+    margin: 20px 35px;
+    font-size: clamp(12px, 2.8vw, 12px);
+    color: #000000;
+    font-weight: 400;
+}
+
+.card .card-btn {
+    padding: 10px 20px;
+    background-color: #f2cd5d;
+    margin: 10px 35px;
+    cursor: pointer;
+    font-size: clamp(8px, 3.8vw, 14px);
+    color: #000000;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* section 3 end */
+
+/* section 4 start */
+#sec4 {
+    background-image: url("/IMAGES/section\ 4\ design.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 50px 0px;
+    font-family: "open sans";
+}
+
+#sec4 .row {
+    display: flex;
+    gap: 30px;
+    padding: 0px 0px;
+}
+
+#sec4 .row .col {
+    width: 33.33%;
+    box-shadow: 1px 1px 10px 1px rgba(83, 80, 80, 0.772);
+    font-family: "Open Sans";
+}
+#sec4 .store-h1{
+font-size:58px;
+color: #000000;
+font-weight: 700;
+text-align: center;
+}
+#sec4 .store-p{
+    width: 60%;
+    margin: 30px auto;
+font-size:clamp(16px,3.5vw,21px);
+font-weight: 400;
+text-align: center;
+}
+#sec4 .col .card-img {
+    width: 100%;
+}
+
+#sec4 .col .img-top {
+    width: 50%;
+    text-align: center;
+    transform: translate(50%,-60%);
+    background-color: #eb7f4e;
+    border: 2px solid black;
+    font-size:clamp(16px,2.8vw,25px);
+    font-weight: 700;
+    padding: 10px 30px;
+}
+#sec4 .card-p {
+    width: 80%;
+    font-size:clamp(16px,2.8vw,18px);
+    margin: 0 auto;
+    margin-top: 60px;
+}
+#sec4 .card-btn {
+    padding: 5px 20px;
+    background-color: #f2cd5d;
+    font-size:clamp(16px,2.8vw,17px);
+    color: #000000;
+    font-weight: 700;
+    text-align: center;
+    border: 2px solid;
+    margin: 2em 8em;
+    
+}
+
+/* section 4 end */
+
+/* section 5 start */
+
+#sec5{
+    font-family: "Open Sans";
+    color: #000000;
+}
+#sec5 .container{
+    width: 90%;
+}
+#sec5 .container .row .col-6{
+    width: 60%;
+}
+#sec5 .container .row .col-4{
+    width: 40%;
+    padding: 30px 20px;
+    margin-top: 5%;
+}
+.container .col-4 .sec5-h1{
+    width: 100%;
+    font-size:clamp(22px,5.4vw,50px);
+font-weight: 700;
+}
+.container .col-4 .sec5-p{
+    width: 100%;
+font-size:clamp(18px,3.5vw,21px);
+font-weight: 400;
+margin: 30px 10px;
+}
+#sec5 .sec5-ul{
+    list-style: none;
+}
+#sec5 .sec5-li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+#sec5 .sec5-a{
+    font-size:clamp(18px,3.5vw,30px);
+}
+/* section 5 end */
+/* section 6 start */
+#sec6 .row{
+    border:2px solid;
+}
+#sec6 .row .col{
+    width: 50%;
+    border: 2px solid;
+    padding: 30px;
+}
+#sec6 .row .col2{
+    width: 50%;
+    border: 2px solid;
+    background-image: url("/IMAGES/sec6\ bg.png");
+}
+#sec6 .row .col .form{
+    color: #000000;
+    font-family: "Open Sans";
+}
+
+#sec6 form{
+    margin: 0px 60px;
+}
+.form .form-h1{
+    font-size: 58px;
+font-weight: 700;
+margin: 50px 65px;
+}
+#sec6 iframe{
+    height: 100%;
+}
+#name{
+    width: 80%;
+    margin: 30px 20px;
+    padding: 20px;
+    background-color: lightgray;
+}
+#gender{
+    width: 80%;
+    margin: 30px 20px;
+    padding: 20px;
+    background-color: lightgray;
+}
+#message{
+    width: 80%;
+    margin: 30px 20px;
+    padding: 20px;
+    background-color: lightgray;
+}
+.sec6-btn{
+    padding: 10px 20px;
+    background-color: #f2cd5d;
+    margin: 20px 20px;
+    cursor: pointer;
+    font-size: clamp(8px, 3.8vw, 14px);
+    color: #000000;
+    font-weight: 700;
+    text-align: center;
+}
+/* section 6 end */
