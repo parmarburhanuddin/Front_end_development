@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox and Grid Demo</title>
+    <style>
+        /* Basic styles for the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Main container using FLEXBOX to arrange the three screens */
+        .main-container {
+            display: flex;
+            justify-content: space-around; /* Distribute screens evenly */
+            align-items: flex-start;
+            gap: 20px; /* Space between screens */
+        }
+
+        /* Common style for each of the three screens */
+        .screen {
+            width: 33.33%; /* Each screen takes up roughly a third of the space */
+            min-height: 300px;
+
+        }
+
+        .screen h2 {
+            text-align: center;
+            margin-top: 0;
+            color: #007BFF;
+        }
+
+        /* --- Screen 1: Flexbox Example --- */
+        .flex-example-container {
+            height: 300px;
+            background-color: #04fa00;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        /* --- Screen 2: Grid Example --- */
+        .grid-example-container {
+            height: 300px;
+            background-color: #ff0000;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        /* --- Screen 3: Centered Content using Flexbox --- */
+        .centered-content-container {
+            height: 300px;
+            background-color: #2c00f2;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* --- MEDIA QUERY for Responsive Design --- */
+        /* On screens 800px or less, stack the screens vertically */
+        @media (max-width: 800px) {
+            .main-container {
+                flex-direction: column; /* Stack screens on top of each other */
+                align-items: center;    /* Center them on the page */
+            }
+            .screen {
+                width: 90%; /* Make screens wider on smaller devices */
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Flexbox & Grid Layout</h1>
+
+    <div class="main-container">
+
+        <!-- Screen 1: Flexbox -->
+        <div class="screen">
+            <div class="flex-example-container">
+            </div>
+        </div>
+
+        <!-- Screen 2: Grid -->
+        <div class="screen">
+            <div class="grid-example-container">
+            </div>
+        </div>
+
+        <!-- Screen 3: Centered Content -->
+        <div class="screen">
+            <div class="centered-content-container">
+    
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
