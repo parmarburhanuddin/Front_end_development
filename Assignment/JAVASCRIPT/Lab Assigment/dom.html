@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Text and Color on Button Click</title>
+</head>
+<body>
+
+    <h1>JavaScript Button Click Example</h1>
+    <p id="message">Hello, World!</p>
+
+   
+    <button id="changeButton">Click Me</button>
+
+    <script>
+     
+        var para = document.getElementById("message");
+        var button = document.getElementById("changeButton");
+
+        
+        button.addEventListener("click", function() {
+            
+            para.textContent = "JavaScript is fun!";
+
+            
+            para.style.color = "blue";
+        });
+    </script>
+
+</body>
+</html>
