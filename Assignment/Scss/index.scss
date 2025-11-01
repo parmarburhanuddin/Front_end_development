@@ -1,0 +1,22 @@
+.list{
+    list-style: none;
+    margin: -1%;
+    display: flex;
+    justify-self: center;
+    li{
+        display: inline-block;
+        border: 2px solid;
+        padding: 10px 180px;
+        background-color: black;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: larger;
+        text-align: center;
+    }
+    :hover{
+        background-color: lightcoral;
+        transition: 0.1s;
+    }
+}

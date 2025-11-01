@@ -1,0 +1,22 @@
+.list {
+  list-style: none;
+  margin: -1%;
+  display: flex;
+  justify-self: center;
+}
+.list li {
+  display: inline-block;
+  border: 2px solid;
+  padding: 10px 180px;
+  background-color: black;
+}
+.list a {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  text-align: center;
+}
+.list :hover {
+  background-color: lightcoral;
+  transition: 0.1s;
+}/*# sourceMappingURL=index.css.map */
