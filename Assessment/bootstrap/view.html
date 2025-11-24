@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>View Submissions - Swan Solution</title>
+  <link rel="stylesheet" href="style1.css" />
+  <style>
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; font-size: 0.95rem; }
+    th { background: #f1f1f1; font-weight: 700; }
+    .no-data { padding: 18px; text-align: center; font-weight: 600; color: #555; }
+    .controls { display:flex; gap:8px; margin-top: 8px; align-items:center; }
+    .controls button { padding:8px 10px; border-radius:4px; border:none; cursor:pointer; }
+    .controls button#clearAll { background:#f44336; color:white; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Submissions</h1>
+
+    <div class="controls">
+      <a href="index.html" class="view-link">Back to Form</a>
+      <button id="clearAll">Clear All Data</button>
+    </div>
+
+    <div id="contentArea"></div>
+  </main>
+
+  <script>
+    (function() {
+      const key = 'guestSubmissions';
+      const content = document.getElementById('contentArea');
+      const raw = localStorage.getItem(key);
+      let list = [];
+      try {
+        list = raw ? JSON.parse(raw) : [];
+        if (!Array.isArray(list)) list = [];
+      } catch(e) {
+        list = [];
+      }
+
+      function render() {
+        content.innerHTML = '';
+        if (!list.length) {
+          const p = document.createElement('div');
+          p.className = 'no-data';
+          p.textContent = 'No data available';
+          content.appendChild(p);
+          return;
+        }
+
+        const table = document.createElement('table');
+        const thead = document.createElement('thead');
+        thead.innerHTML = '<tr><th>Full Name</th><th>Phone Number</th><th>Email Address</th><th>Aadhar Card Number</th><th>Check in date</th><th>Check Out date</th></tr>';
+        table.appendChild(thead);
+
+        const tbody = document.createElement('tbody');
+        list.forEach(item => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = 
+            '<td>' + escapeHtml(item.fullName) + '</td>' +
+            '<td>' + escapeHtml(item.phone) + '</td>' +
+            '<td>' + escapeHtml(item.email) + '</td>' +
+            '<td>' + escapeHtml(item.aadhar) + '</td>' +
+            '<td>' + escapeHtml(item.checkin) + '</td>' +
+            '<td>' + escapeHtml(item.checkout) + '</td>';
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        content.appendChild(table);
+      }
+
+      function escapeHtml(s) {
+        if (!s) return '';
+        return s.replace(/[&<>"']/g, function(m){ return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m]; });
+      }
+
+      // Clear All Data button
+      document.getElementById('clearAll').addEventListener('click', function() {
+        if (!confirm('Are you sure you want to clear all submissions?')) return;
+        localStorage.removeItem(key);
+        list = [];
+        render();
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>

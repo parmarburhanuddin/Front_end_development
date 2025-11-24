@@ -1,0 +1,123 @@
+/* Beginner - simple styling, responsive via flexbox */
+:root {
+  --font-size: 18px;
+  --label-color: #2a2a2a;
+  --accent: #2c6ef7;
+  --error: #d33;
+  --success: #119a47;
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  font-size: var(--font-size);
+  margin: 0;
+  padding: 16px;
+  background: #f7f7f7;
+  color: #111;
+}
+
+.container {
+  max-width: 720px;
+  margin: 12px auto;
+  background: #fff;
+  padding: 18px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+/* Form layout: two-column on larger screens, single on small */
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+/* Use two columns on wider screens (beginner-friendly) */
+@media (min-width: 700px) {
+  form {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* make the buttons row span full width */
+  .buttons { grid-column: 1 / -1; display:flex; align-items:center; gap:8px; }
+  #formMessage { grid-column: 1 / -1; }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-weight: 600;
+  color: var(--label-color);
+  margin-bottom: 6px;
+}
+
+.field input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.error {
+  color: var(--error);
+  font-size: 0.9rem;
+  margin-top: 6px;
+  min-height: 1.1em;
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  align-items: center;
+}
+
+button[type="submit"],
+button[type="reset"] {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button#submitBtn { background: var(--accent); color: white; }
+button#resetBtn { background: #eee; color: #111; }
+
+.view-link {
+  margin-left: auto;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 4px;
+  background: #ddd;
+  color: #111;
+  font-weight: 600;
+}
+
+.message {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.success-msg { background: rgba(17,154,71,0.12); color: var(--success); border: 1px solid rgba(17,154,71,0.16); }
+.error-msg { background: rgba(211,51,51,0.07); color: var(--error); border: 1px solid rgba(211,51,51,0.12); }
+
+/* small helper to make inputs full-width inside two-column grid */
+.field input[type="date"],
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="tel"] {
+  width: 100%;
+}
