@@ -76,7 +76,6 @@
         return s.replace(/[&<>"']/g, function(m){ return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m]; });
       }
 
-      // Clear All Data button
       document.getElementById('clearAll').addEventListener('click', function() {
         if (!confirm('Are you sure you want to clear all submissions?')) return;
         localStorage.removeItem(key);

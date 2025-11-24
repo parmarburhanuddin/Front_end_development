@@ -1,4 +1,3 @@
-/* Beginner - simple styling, responsive via flexbox */
 :root {
   --font-size: 18px;
   --label-color: #2a2a2a;
@@ -33,19 +32,17 @@ h1 {
   text-align: center;
 }
 
-/* Form layout: two-column on larger screens, single on small */
 form {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
 }
 
-/* Use two columns on wider screens (beginner-friendly) */
 @media (min-width: 700px) {
   form {
     grid-template-columns: 1fr 1fr;
   }
-  /* make the buttons row span full width */
+
   .buttons { grid-column: 1 / -1; display:flex; align-items:center; gap:8px; }
   #formMessage { grid-column: 1 / -1; }
 }
@@ -114,7 +111,6 @@ button#resetBtn { background: #eee; color: #111; }
 .success-msg { background: rgba(17,154,71,0.12); color: var(--success); border: 1px solid rgba(17,154,71,0.16); }
 .error-msg { background: rgba(211,51,51,0.07); color: var(--error); border: 1px solid rgba(211,51,51,0.12); }
 
-/* small helper to make inputs full-width inside two-column grid */
 .field input[type="date"],
 .field input[type="text"],
 .field input[type="email"],

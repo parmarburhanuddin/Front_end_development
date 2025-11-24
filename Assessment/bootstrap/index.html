@@ -11,90 +11,77 @@
     <h1>Guest Registration Form</h1>
 
     <form id="guestForm" novalidate>
-      <!-- Full Name -->
       <div class="field">
         <label for="fullName">Full Name</label>
         <input type="text" id="fullName" name="fullName" placeholder="Enter full name" />
         <span class="error" id="err-fullName"></span>
       </div>
 
-      <!-- Phone Number -->
       <div class="field">
         <label for="phone">Phone Number</label>
         <input type="tel" id="phone" name="phone" placeholder="10 digit phone number" maxlength="10" />
         <span class="error" id="err-phone"></span>
       </div>
 
-      <!-- Email Address -->
       <div class="field">
         <label for="email">Email Address</label>
         <input type="email" id="email" name="email" placeholder="example@domain.com" />
         <span class="error" id="err-email"></span>
       </div>
 
-      <!-- Aadhar Card Number -->
       <div class="field">
         <label for="aadhar">Aadhar Card Number</label>
         <input type="text" id="aadhar" name="aadhar" placeholder="12 digit Aadhar number" maxlength="12" />
         <span class="error" id="err-aadhar"></span>
       </div>
 
-      <!-- Check in date -->
       <div class="field">
         <label for="checkin">Check In date</label>
         <input type="date" id="checkin" name="checkin" />
         <span class="error" id="err-checkin"></span>
       </div>
 
-      <!-- Check Out date -->
       <div class="field">
         <label for="checkout">Check Out date</label>
         <input type="date" id="checkout" name="checkout" />
         <span class="error" id="err-checkout"></span>
       </div>
 
-      <!-- Purpose of visit -->
       <div class="field">
         <label for="purpose">Purpose of visit</label>
         <input type="text" id="purpose" name="purpose" placeholder="e.g., Business / Leisure" />
         <span class="error" id="err-purpose"></span>
       </div>
 
-      <!-- Buttons -->
       <div class="buttons">
         <button type="submit" id="submitBtn">Submit</button>
         <button type="reset" id="resetBtn">Reset</button>
         <a href="view.html" class="view-link">View Submissions</a>
       </div>
 
-      <!-- Feedback -->
       <div id="formMessage" class="message" aria-live="polite"></div>
     </form>
   </main>
 
   <script>
-    // Beginner-friendly validation + localStorage save
+
     (function() {
       const form = document.getElementById('guestForm');
       const messageBox = document.getElementById('formMessage');
 
-      // Utility: set error message for field
       function setError(id, text) {
         document.getElementById('err-' + id).textContent = text || '';
       }
 
-      // Clear all field errors
       function clearErrors() {
         ['fullName','phone','email','aadhar','checkin','checkout','purpose']
           .forEach(id => setError(id, ''));
       }
 
-      // Validate individually according to PDF rules
       function validate(formData) {
         clearErrors();
         let ok = true;
 
-        // All fields required
         const requiredFields = ['fullName','phone','email','aadhar','checkin','checkout','purpose'];
         requiredFields.forEach(field => {
           if (!formData.get(field) || formData.get(field).toString().trim() === '') {
@@ -105,7 +92,6 @@
 
         if (!ok) return false;
 
-        // Email format (basic)
         const email = formData.get('email').trim();
         const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRe.test(email)) {
@@ -113,14 +99,12 @@
           ok = false;
         }
 
-        // Phone exactly 10 digits (numeric)
         const phone = formData.get('phone').trim();
         if (!/^\d{10}$/.test(phone)) {
           setError('phone','Phone must be exactly 10 digits.');
           ok = false;
         }
 
-        // Aadhar exactly 12 digits (numeric)
         const aadhar = formData.get('aadhar').trim();
         if (!/^\d{12}$/.test(aadhar)) {
           setError('aadhar','Aadhar must be exactly 12 digits.');
@@ -130,7 +114,6 @@
         return ok;
       }
 
-      // Save submission to localStorage (list of submissions)
       function saveSubmission(dataObj) {
         const key = 'guestSubmissions';
         const raw = localStorage.getItem(key);
@@ -145,13 +128,11 @@
         localStorage.setItem(key, JSON.stringify(list));
       }
 
-      // Reset feedback and errors when user clicks Reset
       document.getElementById('resetBtn').addEventListener('click', function() {
         clearErrors();
         messageBox.textContent = '';
       });
 
-      // Submit handler
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         messageBox.textContent = '';
@@ -163,7 +144,6 @@
           return;
         }
 
-        // Build object to store
         const submission = {
           fullName: fd.get('fullName').trim(),
           phone: fd.get('phone').trim(),
@@ -175,13 +155,11 @@
           submittedAt: new Date().toISOString()
         };
 
-        // Save to localStorage
         try {
           saveSubmission(submission);
           messageBox.textContent = 'Data saved successfully.';
           messageBox.className = 'message success-msg';
 
-          // Clear the form (reset)
           form.reset();
           clearErrors();
         } catch (err) {
