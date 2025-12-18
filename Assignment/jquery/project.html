@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Mini Project</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+
+        .box {
+            background: white;
+            padding: 15px;
+            width: 350px;
+            margin: auto;
+            border-radius: 5px;
+        }
+
+        input {
+            width: 80%;
+            padding: 5px;
+        }
+
+        button {
+            padding: 6px 10px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        .dark {
+            background: #222;
+            color: white;
+        }
+
+        .highlight {
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h3>My Simple Notes</h3>
+
+    <input type="text" id="noteText" placeholder="Enter note">
+    <button id="addNote">Add</button>
+
+    <br><br>
+
+    <button id="toggleNotes">Show / Hide Notes</button>
+    <button id="theme">Change Theme</button>
+
+    <ul id="notes"></ul>
+</div>
+<script>
+$(document).ready(function(){
+    $("#addNote").click(function(){
+        var text = $("#noteText").val();
+
+        if(text != ""){
+            $("#notes").append("<li>" + text + "</li>");
+            $("#noteText").val("");
+        }
+    });
+    $(document).on("click","li",function(){
+        $(this).fadeOut(500,function(){
+            $(this).remove();
+        });
+    });
+    $("#toggleNotes").click(function(){
+        $("#notes").slideToggle();
+    });
+
+    $("#theme").click(function(){
+        $("body").toggleClass("dark");
+    });
+  $("#noteText").keyup(function(){
+    $(this).addClass("highlight");
+});
+
+});
+</script>
+
+</body>
+</html>
